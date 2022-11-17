@@ -2,7 +2,7 @@
 // ! el arreglo de tareas
 import Card from "./Card";
 
-export default function TaskList({tareas}) {
+export default function TaskList({tareas, eliminarTarea}) {
 
   // * Comprobar que hayan tareas
   if (tareas.length === 0) {
@@ -17,7 +17,7 @@ export default function TaskList({tareas}) {
     <main>
       {tareas.map((tarea) => {
         return(
-          <Card key={tarea.id} tarea={tarea}/>
+          <Card key={tarea.id} tarea={tarea} eliminarTarea = {eliminarTarea}/>
         );
       })}
     </main>

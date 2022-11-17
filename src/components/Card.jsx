@@ -1,4 +1,4 @@
-function Card({tarea}) {
+function Card({tarea, eliminarTarea}) {
     return(
         <div>
           <h1>{tarea.titulo}</h1>
@@ -9,6 +9,7 @@ function Card({tarea}) {
             disabled
           >
           </textarea>
+          <button onClick={() => eliminarTarea(tarea.id)}>Eliminar Tarea</button>
         </div>
     );
 }
