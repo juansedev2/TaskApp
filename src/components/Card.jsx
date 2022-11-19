@@ -1,4 +1,15 @@
+// ! Importamos la función useContext para usar el contexto
+import { useContext } from 'react';
+//! Importamos el CONTEXTO (VARIABLE DE LA INFORMACIÓN)
+import { ContextoTareas} from '../context/TaskContext';
+
 function Card({tarea, eliminarTarea}) {
+
+  // ! Recupermos el valor compartido con value en TaskContext a través de la función useContext(nombre_contexto)
+  const valor = useContext(ContextoTareas);
+
+  console.log(valor);
+
     return(
         <div>
           <h1>{tarea.titulo}</h1>

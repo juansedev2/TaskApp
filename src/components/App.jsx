@@ -38,7 +38,6 @@ function App(){
 
   // * Función para crear nuevas tareas, agregando una nueva con las que haya
   function crearTarea(nueva_tarea) {
-    console.log("Acumulador: " + acumulador);
     // ! Lógica: asignar a tks una actualización del mismo y lo nuevo es el operador spread, que es un rápido clonado de []
     // ![...arreglo, elemento_nuevo] que retorna el arreglo anterior más el elemento agregado, pero NO modifica el original
     // !salvo este caso que estamos actualizando el estado
