@@ -89,3 +89,22 @@ footer{
     margin-top: 300px;
     color: var(--color-titulo)
 }
+/*!Media queries*/
+/*!Móviles en vertical*/
+@media (max-width: 900px) {
+    main{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    main section:first-child{
+        width: 300px;
+    }
+    main section:last-child{
+        width: 350px;
+        margin: 0 auto;
+    }
+    div.card_contenedor{
+        width: 400px;
+    }
+
+}
