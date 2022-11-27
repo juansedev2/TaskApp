@@ -1,10 +1,14 @@
-import { useState} from "react";
+import { useState, useContext} from "react";
+import {ContextoTareas} from "../context/TaskContext";
+import {Input, Label, Button} from "reactstrap";
 
 // ! Este componente contien el formulario de las tareas
-function Form({crearTarea}) {
+function Form() {
 
     const [titulo, setTitulo] = useState("");
     const [descripcion, setDescripcion] = useState("");
+
+    const {crearTarea} = useContext(ContextoTareas);
 
     function capturarDatos(evento) {
         
@@ -23,18 +27,18 @@ function Form({crearTarea}) {
     }
 
     return(
-        <section>
+        <section className="seccion_formulario">
             <form onSubmit={capturarDatos} id="formulario">
-                <div>
-                    <label htmlFor="titulo">Título de la tarea </label>
-                    <input type="text" id="titulo" minLength={5} maxLength={15} autoFocus required onChange={(evento => setTitulo(evento.target.value))}/>
+                <div className="contenedor_datos_form">
+                    <Label for="titulo">Título de la tarea</Label>
+                    <Input id="titulo" name="titulo" type="text" minLength={5} maxLength={20} autoFocus required onChange={(evento => setTitulo(evento.target.value))}/>
                 </div>
-                <div>
-                    <label htmlFor="descripcion">Descripción </label>
-                    <textarea type="text" id="descripcion" minLength={5} maxLength={100} required onChange={(evento => setDescripcion(evento.target.value))}></textarea>
+                <div className="contenedor_datos_form">
+                    <Label for="descripcion">Descripción</Label>
+                    <Input type="textarea" id="descripcion" rows="5" minLength={5} maxLength={100} required onChange={(evento => setDescripcion(evento.target.value))}/>
                 </div>
-                <div>
-                    <button className="boton" value="Boton_envio">Agregar tarea</button>
+                <div className="div_boton">
+                    <Button className="boton" value="Boton_envio">Agregar tarea</Button>
                 </div>
             </form>
         </section>

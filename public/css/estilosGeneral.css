@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-fondo: #1B2021;
+}
+html{
+    background-color: var(--color-fondo);
+}
+div#root{
+    background-color: var(--color-fondo);
+}

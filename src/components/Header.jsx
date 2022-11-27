@@ -1,7 +1,8 @@
+
 function Cabecera() {
     return(
         <header>
-            <h1>Task Application</h1>
+            <h1>Aplicación de Tareas</h1>
         </header>
     );
 }

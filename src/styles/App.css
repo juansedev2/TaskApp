@@ -1,0 +1,91 @@
+/*!Estilos de la aplicación de tareas, y en este archivo es que se contendrán a todos*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-titulo: white;
+    --color-titulo-tarjeta: white;
+    --color-fondo-formulario: #2d3038;
+    --color-fondo-tarjeta: #061627;
+}
+header{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+header h1{
+    margin: 5vh;
+    color: var(--color-titulo);
+}
+h1.titulo_no_hay{
+    color: var(--color-titulo);
+    width: 73%;
+    text-align: center;
+}
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: 6vh auto;
+}
+main section:first-child{
+    width: 25%;
+    margin: 4vw;
+}
+main section:last-child{
+    width: 75%;
+    margin: 0;
+}
+section.lista_tareas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+form#formulario{
+    border: 1px solid var(--color-fondo-formulario);
+    border-radius: 20px;
+    background-color: var(--color-fondo-formulario);
+}
+section.seccion_formulario form{
+    padding: 0 30px;
+}
+form div{
+    margin: 20px 0;
+}
+div.div_boton{
+    text-align: center;
+}
+div.contenedor_datos_form label{
+    color: var(--color-titulo);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+div.card{
+    height: 400px;
+    padding: 30px;
+}
+div.card_contenedor{
+    margin: 15px;
+    background-color: var(--color-fondo-tarjeta);
+    border: 1px solid var(--color-fondo-tarjeta);
+    border-radius: 20px;
+}
+div.card_titulo{
+    color: var(--color-titulo-tarjeta);
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-align: center;
+    padding: 8px 0;
+}
+textarea.card_descripcion{
+    margin: 8px 0;
+}
+footer{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 300px;
+    color: var(--color-titulo)
+}
